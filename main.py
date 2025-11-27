@@ -16,7 +16,7 @@ app = FastAPI(lifespan=lifespan)
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Docusaurus default port
+    allow_origins=["*"],  # Docusaurus default port
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
