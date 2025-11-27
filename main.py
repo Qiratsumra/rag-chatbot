@@ -27,6 +27,9 @@ class IngestRequest(BaseModel):
 
 class ChatRequest(BaseModel):
     query: str
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
 
 @app.post("/ingest")
 async def ingest_document(request: IngestRequest):
